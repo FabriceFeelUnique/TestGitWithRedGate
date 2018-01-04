@@ -42,3 +42,5 @@ CREATE TABLE [dbo].[subproducts]
 GO
 ALTER TABLE [dbo].[subproducts] ADD CONSTRAINT [PK_subproducts_sku] PRIMARY KEY CLUSTERED  ([sku]) WITH (FILLFACTOR=90) ON [PRIMARY]
 GO
+CREATE NONCLUSTERED INDEX [Test_Create_Then_Disale] ON [dbo].[subproducts] ([parentsku]) ON [PRIMARY]
+GO

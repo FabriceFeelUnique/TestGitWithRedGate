@@ -36,5 +36,7 @@ CREATE TABLE [dbo].[ads]
 GO
 ALTER TABLE [dbo].[ads] ADD CONSTRAINT [PK_ads] PRIMARY KEY CLUSTERED  ([rsn]) WITH (FILLFACTOR=90) ON [PRIMARY]
 GO
+CREATE NONCLUSTERED INDEX [Test_Create_Then_Disale] ON [dbo].[ads] ([active]) ON [PRIMARY]
+GO
 ALTER TABLE [dbo].[ads] ADD CONSTRAINT [FK__ads__subproducts] FOREIGN KEY ([subsku]) REFERENCES [dbo].[subproducts] ([sku])
 GO
