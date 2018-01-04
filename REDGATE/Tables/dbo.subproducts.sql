@@ -44,3 +44,5 @@ ALTER TABLE [dbo].[subproducts] ADD CONSTRAINT [PK_subproducts_sku] PRIMARY KEY 
 GO
 CREATE NONCLUSTERED INDEX [Test_Create_Then_Disale] ON [dbo].[subproducts] ([parentsku]) ON [PRIMARY]
 GO
+ALTER INDEX [Test_Create_Then_Disale] ON [dbo].[subproducts] DISABLE
+GO
